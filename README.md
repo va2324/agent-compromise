@@ -32,7 +32,12 @@ docker-compose --version
 
 To install PostgreSQL, follow the instructions on this website: https://www.w3schools.com/postgresql/postgresql_install.php
 
-You do not have to install pgAdmin4 if you do not want to since you can just use the SQL Shell, but it is much easier to manage PostgreSQL databases with the pgAdmin4 application. Once you have PostgreSQL installed, create a new database and insert sample data and malicious prompts. The db.sql file contains some examples. 
+You do not have to install pgAdmin4 if you do not want to since you can just use the SQL Shell, but it is much easier to manage PostgreSQL databases with the pgAdmin4 application. Once you have PostgreSQL installed, create a new database and insert sample data and malicious prompts. Take inspiration from the malicious prompts in the SorryBench dataset: https://huggingface.co/datasets/sorry-bench/sorry-bench-202503
+
+When you are finished with your database, export your data to a db.sql file with the following command: 
+```
+pg_dump -U <username> -h localhost -p 5432 -d <database name> -f db.sql
+```
 
 ## API Keys
 You will need to obtain API keys from MistralAI & OpenRouter. The database agent runs on the MistralAI model 'mistral-small-2603' for unlimited requests, and the terminal & file agents run on free models from OpenRouter (you can also used paid models if you are willing to pay). Obtain API keys from the following websites: 
