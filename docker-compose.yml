@@ -1,6 +1,6 @@
 version: '5.3.1'
 services: 
-  host1: # vulnerable Linux host
+  linux: # vulnerable Linux host
     image: alpine
     container_name: vuln_host
     stdin_open: true
