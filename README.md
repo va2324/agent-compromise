@@ -34,7 +34,7 @@ To install PostgreSQL, follow the instructions on this website: https://www.w3sc
 
 You do not have to install pgAdmin4 if you do not want to since you can just use the SQL Shell, but it is much easier to manage PostgreSQL databases with the pgAdmin4 application. Once you have PostgreSQL installed, create a new database and insert sample data and malicious prompts. Take inspiration from the malicious prompts in the SorryBench dataset: https://huggingface.co/datasets/sorry-bench/sorry-bench-202503
 
-When you are finished with your database, export your data to a db.sql file with the following command: 
+When you are finished with your database, export your data to a db.sql file with the following command and place it in the project's top-level directory: 
 ```
 pg_dump -U <username> -h localhost -p 5432 -d <database name> -f db.sql
 ```
