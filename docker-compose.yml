@@ -10,7 +10,7 @@ services:
     ports:   # sets up SSH on vuln_host & enables remote SSH login (ssh -p 22 root@vuln_host; Login with 'password123')
       - 2222:22
 
-  host2: # host with agents
+  agent: # host with agents
     image: agent
     container_name: agent_host
     build: .
